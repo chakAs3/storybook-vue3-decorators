@@ -38,7 +38,7 @@
   },
   "pnpm":{
       "overrides": {
-         "npm:@storybook/vue3": "@javachakir/storybook-vue3-renderer"
+         "@storybook/vue3": "npm:@javachakir/storybook-vue3-renderer"
       }
   }
   
