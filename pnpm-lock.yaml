@@ -1,5 +1,8 @@
 lockfileVersion: '6.0'
 
+overrides:
+  '@storybook/vue3': '@javachakir/storybook-vue3-renderer'
+
 dependencies:
   '@storybook/global':
     specifier: ^5.0.0
@@ -40,8 +43,8 @@ devDependencies:
     specifier: ^7.0.20
     version: 7.0.20
   '@storybook/vue3':
-    specifier: ^7.1.0-alpha.29
-    version: 7.1.0-alpha.29(vue@3.2.47)
+    specifier: '@javachakir/storybook-vue3-renderer'
+    version: link:@javachakir/storybook-vue3-renderer
   '@storybook/vue3-vite':
     specifier: ^7.1.0-alpha.29
     version: 7.1.0-alpha.29(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.2)(vite@4.3.9)(vue@3.2.47)
@@ -2355,13 +2358,6 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /@storybook/core-client@7.1.0-alpha.29:
-    resolution: {integrity: sha512-t4FQGs7yns0Boyujes1CoE3oM5w8cxqdAeb//+EZ/TH+DhMAwdMCHjE9TCbjPea06CA/14/wG+xNKGxHE4gl3w==}
-    dependencies:
-      '@storybook/client-logger': 7.1.0-alpha.29
-      '@storybook/preview-api': 7.1.0-alpha.29
-    dev: true
-
   /@storybook/core-common@7.1.0-alpha.29:
     resolution: {integrity: sha512-KQrLUz+PlkYWrYm/NPYoZRnWVhHtGl+p1E3NInAJrbzXSPBwsBJNFdd5TSh7IsyXMOzW5O4PnH5IR9MTH7EHjA==}
     dependencies:
@@ -2716,7 +2712,7 @@ packages:
     dependencies:
       '@storybook/builder-vite': 7.1.0-alpha.29(typescript@5.0.2)(vite@4.3.9)
       '@storybook/core-server': 7.1.0-alpha.29
-      '@storybook/vue3': 7.1.0-alpha.29(vue@3.2.47)
+      '@storybook/vue3': link:@javachakir/storybook-vue3-renderer
       '@vitejs/plugin-vue': 4.1.0(vite@4.3.9)(vue@3.2.47)
       magic-string: 0.27.0
       react: 18.2.0
@@ -2732,25 +2728,6 @@ packages:
       - utf-8-validate
       - vite-plugin-glimmerx
       - vue
-    dev: true
-
-  /@storybook/vue3@7.1.0-alpha.29(vue@3.2.47):
-    resolution: {integrity: sha512-zGdVDIBSZjAs/PV5j/0wpuQ7Lo7SgLNt2QCmfzBHgNZ/2LQjn3bG+47dsewt+t/nZciIK9M+zd5Lcstvo6pDeg==}
-    engines: {node: '>=16.0.0'}
-    peerDependencies:
-      vue: ^3.0.0
-    dependencies:
-      '@storybook/core-client': 7.1.0-alpha.29
-      '@storybook/docs-tools': 7.1.0-alpha.29
-      '@storybook/global': 5.0.0
-      '@storybook/preview-api': 7.1.0-alpha.29
-      '@storybook/types': 7.1.0-alpha.29
-      ts-dedent: 2.2.0
-      type-fest: 2.19.0
-      vue: 3.2.47
-      vue-component-type-helpers: 1.6.5
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /@testing-library/dom@8.20.0:
@@ -7147,10 +7124,6 @@ packages:
   /void-elements@3.1.0:
     resolution: {integrity: sha512-Dhxzh5HZuiHQhbvTW9AMetFfBHDMYpo23Uo9btPXgdYP+3T5S+p+jgNy7spra+veYhBP2dCSgxR/i2Y02h5/6w==}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /vue-component-type-helpers@1.6.5:
-    resolution: {integrity: sha512-iGdlqtajmiqed8ptURKPJ/Olz0/mwripVZszg6tygfZSIL9kYFPJTNY6+Q6OjWGznl2L06vxG5HvNvAnWrnzbg==}
     dev: true
 
   /vue-docgen-api@4.72.5(vue@3.2.47):
