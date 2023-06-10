@@ -1,0 +1,39 @@
+{
+  "name": "my-vue3-sandbox",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@storybook/global": "^5.0.0",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.1.0-alpha.30",
+    "@storybook/addon-interactions": "^7.1.0-alpha.30",
+    "@storybook/addon-links": "^7.1.0-alpha.30",
+    "@storybook/blocks": "^7.1.0-alpha.30",
+    "@storybook/core-events": "^7.0.20",
+    "@storybook/csf": "^0.1.1",
+    "@storybook/jest": "^0.1.0",
+    "@storybook/preview-api": "^7.0.20",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@storybook/types": "^7.0.20",
+    "@storybook/vue3": "link:/Users/chakir/devs/storybook/code/renderers/vue3",
+    "@storybook/vue3-vite": "^7.1.0-alpha.30",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.1.0-alpha.30",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9",
+    "vue-tsc": "^1.4.2"
+  }
+}
