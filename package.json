@@ -27,7 +27,7 @@
     "@storybook/preview-api": "^7.0.20",
     "@storybook/testing-library": "^0.0.14-next.2",
     "@storybook/types": "^7.0.20",
-    "@storybook/vue3": "link:/Users/chakir/devs/storybook/code/renderers/vue3",
+
     "@storybook/vue3-vite": "^7.1.0-alpha.30",
     "react": "^18.2.0",
     "@vitejs/plugin-vue": "^4.1.0",
@@ -36,5 +36,10 @@
     "typescript": "^5.0.2",
     "vite": "^4.3.9",
     "vue-tsc": "^1.4.2"
+  },
+  "pnpm":{
+    "overrides":{
+      "@storybook/vue3":"npm:@javachakir/vue3"
+    }
   }
 }
