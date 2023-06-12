@@ -24,6 +24,7 @@ const ComponentTemplateWrapper = () => ({
 const SimpleTemplateWrapper = () => ({
   template: `
     <div style="border: 5px solid red;">
+      <div>Decorator 1</div>
       <story/>
     </div>
     `,
@@ -34,12 +35,12 @@ const VueWrapperWrapper: DecoratorFunction<VueRenderer> = (storyFn, context) => 
   const story = storyFn();
   // Vue 3 "Functional" component as decorator
   return () => {
-    return h('div', { style: 'border: 5px solid blue' }, h(story, context.args));
+    return h('div', { style: 'border: 5px solid blue' },[h("div","Decorator 2"), h(story, context.args)]);
   };
 };
 
 const DynamicWrapperWrapper: DecoratorFunction<VueRenderer> = (storyFn, { args }) => ({
-  template: `<div :style="{ borderWidth: level, borderColor: 'green', borderStyle: 'solid' }"><story /></div>`,
+  template: `<div :style="{ borderWidth: level, borderColor: 'green', borderStyle: 'solid' }"><div>Decorator 3</div><story /></div>`,
   computed: { level: () => `${args.level}px` },
 });
 
