@@ -1,11 +1,10 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}
-    <slot></slot>
-  </button>
+  <button type="button"  @click="onClick" :style="style">{{ label }}........</button>
 </template>
 
 <script lang="ts" setup>
 import './button.css';
+import './anim.css'
 import { computed } from 'vue';
 
 const props = withDefaults(defineProps<{
