@@ -1,11 +1,10 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}
-    <slot></slot>
-  </button>
+  <button type="button"  :class="classes" @click="onClick" :style="style">{{ label }}</button>
 </template>
 
 <script lang="ts" setup>
 import './button.css';
+
 import { computed } from 'vue';
 
 const props = withDefaults(defineProps<{
@@ -26,6 +25,8 @@ const props = withDefaults(defineProps<{
    */
   backgroundColor?: string,
 
+  animate?: boolean
+
 }>(), { primary: false });
 
 const emit = defineEmits<{
@@ -34,6 +35,7 @@ const emit = defineEmits<{
 
 const classes = computed(() => ({
   'storybook-button': true,
+  'storybook-button--animated': props.animate,
   'storybook-button--primary': props.primary,
   'storybook-button--secondary': !props.primary,
   [`storybook-button--${props.size || 'medium'}`]: true,
