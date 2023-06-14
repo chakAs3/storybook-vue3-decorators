@@ -1,5 +1,8 @@
 lockfileVersion: '6.0'
 
+overrides:
+  '@storybook/vue3': npm:@storybook-vue/vue3
+
 dependencies:
   '@storybook/global':
     specifier: ^5.0.0
@@ -46,11 +49,11 @@ devDependencies:
     specifier: ^7.0.20
     version: 7.0.20
   '@storybook/vue3':
-    specifier: ^7.1.0-alpha.30
-    version: 7.1.0-alpha.30(vue@3.2.47)
+    specifier: npm:@storybook-vue/vue3
+    version: /@storybook-vue/vue3@7.1.0-alpha.30.0(lodash@4.17.21)(vue@3.2.47)
   '@storybook/vue3-vite':
     specifier: ^7.1.0-alpha.30
-    version: 7.1.0-alpha.30(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.2)(vite@4.3.9)(vue@3.2.47)
+    version: 7.1.0-alpha.30(lodash@4.17.21)(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.2)(vite@4.3.9)(vue@3.2.47)
   '@vitejs/plugin-vue':
     specifier: ^4.1.0
     version: 4.1.0(vite@4.3.9)(vue@3.2.47)
@@ -1842,6 +1845,27 @@ packages:
     resolution: {integrity: sha512-XJfwUVUKDHF5ugKwIcxEgc9k8b7HbznCp6eUfWgu710hMPNIO4aw4/zB5RogDQz8nd6gyCDpU9O/m6qYEWY6yQ==}
     dev: true
 
+  /@storybook-vue/vue3@7.1.0-alpha.30.0(lodash@4.17.21)(vue@3.2.47):
+    resolution: {integrity: sha512-YZjSNSOhDEvi8b2+PaJzQjuGMguwKk8rONIGzBW3RZyfoW2d6lF09vGmD2tjNg2Pk62aHv1jA6azzaZlm1LSWA==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      lodash: '*'
+      vue: ^3.0.0
+    dependencies:
+      '@storybook/core-client': 7.1.0-alpha.30
+      '@storybook/docs-tools': 7.1.0-alpha.30
+      '@storybook/global': 5.0.0
+      '@storybook/preview-api': 7.1.0-alpha.30
+      '@storybook/types': 7.1.0-alpha.30
+      lodash: 4.17.21
+      ts-dedent: 2.2.0
+      type-fest: 3.11.1
+      vue: 3.2.47
+      vue-component-type-helpers: 1.6.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@storybook/addon-actions@7.1.0-alpha.30(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-a3Ct1xrW9MNLREN3k8wdlE1b1n9obusWxo4yoq6fS1iMXRl4LHaMTIVdfg+coB0mfbfglMq9QlmHEnsw9n++AA==}
     peerDependencies:
@@ -2719,7 +2743,7 @@ packages:
       file-system-cache: 2.3.0
     dev: true
 
-  /@storybook/vue3-vite@7.1.0-alpha.30(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.2)(vite@4.3.9)(vue@3.2.47):
+  /@storybook/vue3-vite@7.1.0-alpha.30(lodash@4.17.21)(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.2)(vite@4.3.9)(vue@3.2.47):
     resolution: {integrity: sha512-h6v7LFipHtcNP8U2iVXYj1ULVH/iiZPr2UFDf5vQ6/z2wWfsKayUv26QUUvDykFGZQbJwluqdWzZBCaviQcwLg==}
     engines: {node: ^14.18 || >=16}
     peerDependencies:
@@ -2729,7 +2753,7 @@ packages:
     dependencies:
       '@storybook/builder-vite': 7.1.0-alpha.30(typescript@5.0.2)(vite@4.3.9)
       '@storybook/core-server': 7.1.0-alpha.30
-      '@storybook/vue3': 7.1.0-alpha.30(vue@3.2.47)
+      '@storybook/vue3': /@storybook-vue/vue3@7.1.0-alpha.30.0(lodash@4.17.21)(vue@3.2.47)
       '@vitejs/plugin-vue': 4.1.0(vite@4.3.9)(vue@3.2.47)
       magic-string: 0.30.0
       react: 18.2.0
@@ -2739,30 +2763,12 @@ packages:
     transitivePeerDependencies:
       - '@preact/preset-vite'
       - bufferutil
+      - lodash
       - supports-color
       - typescript
       - utf-8-validate
       - vite-plugin-glimmerx
       - vue
-    dev: true
-
-  /@storybook/vue3@7.1.0-alpha.30(vue@3.2.47):
-    resolution: {integrity: sha512-yRE5hp4nJTZw5yhoQ+Ez9bknH3x7Nkoa9IqWyDQKlX2oowVMolHw1o2HTCzoqglxrhDabNNrFTvCx+A7hbVY4g==}
-    engines: {node: '>=16.0.0'}
-    peerDependencies:
-      vue: ^3.0.0
-    dependencies:
-      '@storybook/core-client': 7.1.0-alpha.30
-      '@storybook/docs-tools': 7.1.0-alpha.30
-      '@storybook/global': 5.0.0
-      '@storybook/preview-api': 7.1.0-alpha.30
-      '@storybook/types': 7.1.0-alpha.30
-      ts-dedent: 2.2.0
-      type-fest: 3.11.1
-      vue: 3.2.47
-      vue-component-type-helpers: 1.6.5
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /@testing-library/dom@8.20.0:
